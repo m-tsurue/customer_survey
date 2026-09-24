@@ -1,0 +1,25 @@
+{
+  "capturedOn": "2026-09-24",
+  "files": {
+    "delivery/コード.gs": {
+      "sha256": "0b038c89cae7b4626a7088a6b593c2f6a31716334d010315f28b9a941b54ca28",
+      "bytes": 25531,
+      "origin": "Copied from live Apps Script editor without edits"
+    },
+    "delivery/appsscript.json": {
+      "sha256": "c983972841bf6138095b3cf09be91c3aef24d6835f8b6d6e6b20ba45c7b04008",
+      "bytes": 584,
+      "origin": "Copied from live Apps Script editor without edits"
+    },
+    "contract/コード.gs": {
+      "sha256": "210df3ade6bbac69013e673c62197beadc2d46ff4d174349da82feee23ac1abf",
+      "bytes": 34924,
+      "origin": "Copied from live Apps Script editor without edits"
+    },
+    "contract/appsscript.json": {
+      "sha256": "3500039a340d706d6dab8ddacd5fb38ccbb4cb505d0c16883e398cd92bfce912",
+      "bytes": 264,
+      "origin": "Copied from live Apps Script editor without edits"
+    }
+  }
+}

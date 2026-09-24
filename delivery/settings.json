@@ -1,0 +1,60 @@
+{
+  "capturedOn": "2026-09-24",
+  "timeZone": "Asia/Tokyo",
+  "source": "Google Apps Script editor / project settings / overview / triggers UI",
+  "projectTitle": "納車後アンケート_Slack通知",
+  "scriptId": "1q9dvabjNnbDGzabiP9FmcU8TkI6kWic_EDK1isQbx_cW426gXcZ_7LX_",
+  "editorUrl": "https://script.google.com/home/projects/1q9dvabjNnbDGzabiP9FmcU8TkI6kWic_EDK1isQbx_cW426gXcZ_7LX_/edit",
+  "container": {
+    "type": "Google Forms",
+    "id": "1NzwSuFHbIRslAxd4hx9LIIIMwHx4Eb_CFLt_nukllOk",
+    "title": "【BUDDICA】ご納車後アンケート",
+    "editUrl": "https://docs.google.com/forms/d/1NzwSuFHbIRslAxd4hx9LIIIMwHx4Eb_CFLt_nukllOk/edit"
+  },
+  "ownerDisplayName": "Customer Center",
+  "projectCreatedDate": "2025-10-26",
+  "gcpProjectSetting": "default",
+  "manifestVisibleInEditor": true,
+  "triggersVisibleToCurrentUser": [
+    {
+      "handlerFunction": "onFormSubmit",
+      "deployment": "Head",
+      "eventSource": "フォームから",
+      "eventType": "フォーム送信時",
+      "ownerLabelInUI": "自分",
+      "failureNotification": "毎日通知を受け取る",
+      "lastExecutionObserved": "2026-09-24T20:23:30+09:00",
+      "errorRateObserved": "0%"
+    }
+  ],
+  "scriptProperties": [
+    {
+      "name": "SLACK_WEBHOOK_URL",
+      "configured": true,
+      "valueStoredInGit": false
+    }
+  ],
+  "bigQuery": {
+    "projectId": "buddica-internal-prod",
+    "datasetId": "extreme_data_prod",
+    "tableId": "sharyoeki_data",
+    "location": "asia-northeast1"
+  },
+  "oauthScopeMode": "explicit",
+  "oauthScopesObserved": [
+    "https://www.googleapis.com/auth/forms.currentonly",
+    "https://www.googleapis.com/auth/forms",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/bigquery",
+    "https://www.googleapis.com/auth/script.scriptapp"
+  ],
+  "deploymentsObservedInOverview": [
+    "Head"
+  ],
+  "unverified": [
+    "Other users triggers",
+    "Slack webhook destination channel",
+    "GCP IAM and API settings outside Apps Script",
+    "End-to-end notification test during this backup"
+  ]
+}

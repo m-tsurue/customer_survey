@@ -1,0 +1,15 @@
+# Credentials and actual property values
+.clasprc.json
+.clasprc.*.json
+**/.clasprc.json
+**/.clasprc.*.json
+.env
+.env.*
+!.env.example
+**/script-properties.json
+**/script-properties.local.json
+**/secrets*.json
+*.pem
+*.key
+node_modules/
+.DS_Store

@@ -1,0 +1,57 @@
+{
+  "capturedOn": "2026-09-24",
+  "timeZone": "Asia/Tokyo",
+  "source": "Google Apps Script editor / project settings / overview / triggers UI",
+  "projectTitle": "成約後アンケート_Slack通知",
+  "scriptId": "1dOZFlsOwMwUcVP1fx3HTolYtnH8y09Hp6hrRKlGslAIrwEHpFAnN14Hk",
+  "editorUrl": "https://script.google.com/home/projects/1dOZFlsOwMwUcVP1fx3HTolYtnH8y09Hp6hrRKlGslAIrwEHpFAnN14Hk/edit",
+  "container": {
+    "type": "Google Forms",
+    "id": "1GDAA9-ENLQUKxTd6oKtNrR8zAaBE9hFb8pYgzxtAFZY",
+    "title": "【BUDDICA】ご契約時の接客・手続きに関するアンケート",
+    "editUrl": "https://docs.google.com/forms/d/1GDAA9-ENLQUKxTd6oKtNrR8zAaBE9hFb8pYgzxtAFZY/edit"
+  },
+  "ownerDisplayName": "Customer Center",
+  "projectCreatedDate": "2025-09-29",
+  "gcpProjectSetting": "default",
+  "manifestVisibleInEditor": false,
+  "triggersVisibleToCurrentUser": [
+    {
+      "handlerFunction": "onFormSubmit",
+      "deployment": "Head",
+      "eventSource": "フォームから",
+      "eventType": "フォーム送信時",
+      "ownerLabelInUI": "自分",
+      "failureNotification": "今すぐ通知を受け取る",
+      "lastExecutionObserved": "2026-09-24T21:02:02+09:00",
+      "errorRateObserved": "0%"
+    }
+  ],
+  "scriptProperties": [
+    {
+      "name": "SLACK_WEBHOOK_URL",
+      "configured": true,
+      "valueStoredInGit": false
+    }
+  ],
+  "bigQuery": {
+    "projectId": "buddica-internal-prod",
+    "datasetId": "extreme_data_prod",
+    "tableId": "sharyoeki_data",
+    "location": "asia-northeast1"
+  },
+  "oauthScopeMode": "automatic",
+  "oauthScopesObserved": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/bigquery"
+  ],
+  "deploymentsObservedInOverview": [
+    "Head"
+  ],
+  "unverified": [
+    "Other users triggers",
+    "Slack webhook destination channel",
+    "GCP IAM and API settings outside Apps Script",
+    "End-to-end notification test during this backup"
+  ]
+}
