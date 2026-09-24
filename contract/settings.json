@@ -1,7 +1,7 @@
 {
   "capturedOn": "2026-09-24",
   "timeZone": "Asia/Tokyo",
-  "source": "Google Apps Script editor / project settings / overview / triggers UI",
+  "source": "Google Apps Script editor / project settings / overview / triggers UI; Slack Incoming Webhook settings UI",
   "projectTitle": "成約後アンケート_Slack通知",
   "scriptId": "1dOZFlsOwMwUcVP1fx3HTolYtnH8y09Hp6hrRKlGslAIrwEHpFAnN14Hk",
   "editorUrl": "https://script.google.com/home/projects/1dOZFlsOwMwUcVP1fx3HTolYtnH8y09Hp6hrRKlGslAIrwEHpFAnN14Hk/edit",
@@ -50,8 +50,30 @@
   ],
   "unverified": [
     "Other users triggers",
-    "Slack webhook destination channel",
     "GCP IAM and API settings outside Apps Script",
     "End-to-end notification test during this backup"
-  ]
+  ],
+  "slackIncomingWebhook": {
+    "verifiedOn": "2026-09-24",
+    "workspaceName": "BUDDICA",
+    "workspaceDomain": "buddicahq.slack.com",
+    "appName": "Incoming Webhook",
+    "appId": "A0F7XDUAZ",
+    "integrationType": "legacy_custom_integration",
+    "developedBy": "Slack",
+    "configurationId": "B09JQ6C42AW",
+    "channelName": "notify_契約後アンケート",
+    "postingName": "契約後_アンケート",
+    "installedOn": "2025-10-04",
+    "configurationUrl": "https://buddicahq.slack.com/services/B09JQ6C42AW",
+    "installedByDisplayName": "鶴衛正紘",
+    "installedBySlackUserId": "U08PKFJJ1A7",
+    "enabledObserved": true,
+    "descriptionLabel": "",
+    "matchesGasScriptProperty": true,
+    "gasScriptPropertyName": "SLACK_WEBHOOK_URL",
+    "webhookSecretStoredInGit": false,
+    "verificationMethod": "Settings list and configuration detail UI; exact comparison of Webhook URL with the GAS script property in the same session; secret values not persisted",
+    "messageDeliveryTestPerformed": false
+  }
 }

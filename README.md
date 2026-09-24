@@ -15,7 +15,7 @@
 
 - `コード.gs`：GASエディタのコード全文。取得時の内容をそのまま保存。
 - `appsscript.json`：実際のマニフェスト。
-- `settings.json`：プロジェクト・フォーム・トリガー・BigQuery・権限の確認済み設定。GASへアップロードするファイルではありません。
+- `settings.json`：プロジェクト・フォーム・トリガー・BigQuery・権限・Slack Webhookの確認済み設定。GASへアップロードするファイルではありません。
 - `script-properties.example.json`：設定するプロパティ名のひな形。秘密値は含みません。
 - `.clasp.json`：既存GASへの紐づけ情報。各フォルダを独立したプロジェクトとして扱います。
 - `.claspignore`：コードとマニフェストだけを同期対象にする指定。
@@ -23,13 +23,14 @@
 ## 資料
 
 - [GAS 設定・復元手順](docs/gas-settings.md)
+- [Incoming Webhook 設定・引き継ぎ](docs/slack-incoming-webhooks.md)
 - [成約後アンケート 判定ロジック](docs/contract-judgment.md)
 - [納車後アンケート 判定ロジック](docs/delivery-judgment.md)
 - [取得時のソース照合情報（SHA-256）](docs/source-snapshot.json)
 
 ## 秘密値とバックアップ範囲
 
-このリポジトリは保存時点で公開設定です。Slack Webhook URL、認証情報、フォーム回答、BigQueryの顧客データは保存していません。`SLACK_WEBHOOK_URL` は両GASで設定済みであることのみ記録しています。
+このリポジトリは保存時点で公開設定です。Slack Webhook URL、認証情報、フォーム回答、BigQueryの顧客データは保存していません。`SLACK_WEBHOOK_URL` の秘密値は保存せず、設定済みであることとSlack側設定との一致を記録しています。通知先・投稿名・管理画面URL・登録者・有効状態も確認済みです。
 
 コードの保存だけでは、フォーム本体、回答、スクリプトプロパティ、インストール型トリガー、GCPの権限設定は復元されません。再構築時は設定資料に沿って別途設定してください。GitHubへのコミットはGASへの自動反映ではありません。
 
