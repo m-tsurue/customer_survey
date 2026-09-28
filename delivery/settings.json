@@ -32,6 +32,12 @@
       "name": "SLACK_WEBHOOK_URL",
       "configured": true,
       "valueStoredInGit": false
+    },
+    {
+      "name": "SLACK_MECHANIC_WEBHOOK_URL",
+      "configured": true,
+      "verifiedOn": "2026-09-28",
+      "valueStoredInGit": false
     }
   ],
   "bigQuery": {
@@ -56,23 +62,6 @@
     "GCP IAM and API settings outside Apps Script",
     "End-to-end notification test during this backup"
   ],
-  "mechanicNotificationPlan": {
-    "preparedOn": "2026-09-28",
-    "status": "prepared_not_deployed",
-    "sourceFile": "MechanicNotification.gs",
-    "channelId": "C0C4WMLJB1P",
-    "channelName": "service_納車後アンケート",
-    "channelUrl": "https://buddicahq.slack.com/archives/C0C4WMLJB1P",
-    "condition": "Existing baseSentiment.emoji is 🔴 or 🟡",
-    "mention": "<!channel>",
-    "gasScriptPropertyName": "SLACK_MECHANIC_WEBHOOK_URL",
-    "webhookCreated": false,
-    "propertyConfigured": false,
-    "codeDeployed": false,
-    "messageDeliveryTestPerformed": false,
-    "webhookSecretStoredInGit": false,
-    "documentation": "docs/delivery-mechanic-notification.md"
-  },
   "slackIncomingWebhook": {
     "verifiedOn": "2026-09-24",
     "workspaceName": "BUDDICA",
@@ -95,5 +84,35 @@
     "webhookSecretStoredInGit": false,
     "verificationMethod": "Settings list and configuration detail UI; exact comparison of Webhook URL with the GAS script property in the same session; secret values not persisted",
     "messageDeliveryTestPerformed": false
-  }
+  },
+  "mechanicNotification": {
+    "preparedOn": "2026-09-28",
+    "status": "deployed",
+    "sourceFile": "MechanicNotification.gs",
+    "channelId": "C0C4WMLJB1P",
+    "channelName": "service_納車後アンケート",
+    "channelUrl": "https://buddicahq.slack.com/archives/C0C4WMLJB1P",
+    "condition": "Existing baseSentiment.emoji is 🔴 or 🟡",
+    "mention": "<!channel>",
+    "gasScriptPropertyName": "SLACK_MECHANIC_WEBHOOK_URL",
+    "webhookCreated": true,
+    "propertyConfigured": true,
+    "codeDeployed": true,
+    "messageDeliveryTestPerformed": true,
+    "webhookSecretStoredInGit": false,
+    "documentation": "docs/delivery-mechanic-notification.md",
+    "deployedOn": "2026-09-28",
+    "configurationId": "B0C4NJNCHQT",
+    "configurationUrl": "https://buddicahq.slack.com/services/B0C4NJNCHQT",
+    "postingName": "納車後アンケート｜整備確認",
+    "installedBySlackUserId": "U08PKFJJ1A7",
+    "installedByDisplayName": "鶴衛正紘",
+    "enabledObserved": true,
+    "matchesGasScriptProperty": true,
+    "testMention": false,
+    "testMessageTs": "1790557775.886519",
+    "testPerformedAt": "2026-09-28T10:09:35+09:00",
+    "endToEndFormSubmissionTestPerformed": false
+  },
+  "triggersReverifiedOn": "2026-09-28"
 }

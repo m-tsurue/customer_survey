@@ -3,7 +3,7 @@
  * 既存通知の後に呼ぶ。未設定時は停止し、追加通知の失敗を呼び出し元へ伝播しない。
  * 判定・本文は既存処理の結果を再利用し、整備部門には @channel のみ付ける。
  */
-function sendDeliveryMechanicNotification(baseSentiment, messagePayload) {
+function sendDeliveryMechanicNotification(baseSentiment, messagePayload, isTest) {
   if (!baseSentiment || (baseSentiment.emoji !== '🔴' && baseSentiment.emoji !== '🟡')) {
     return 'not_target';
   }
@@ -31,13 +31,13 @@ function sendDeliveryMechanicNotification(baseSentiment, messagePayload) {
     }
 
     const blocks = messagePayload.blocks.slice();
-    blocks.unshift(slackSection('<!channel>'));
+    if (isTest !== true) blocks.unshift(slackSection('<!channel>'));
     const response = UrlFetchApp.fetch(webhookUrl, {
       method: 'post',
       contentType: 'application/json',
       payload: JSON.stringify({
         mrkdwn: true,
-        text: '<!channel>\n' + messagePayload.text,
+        text: (isTest === true ? '' : '<!channel>\n') + messagePayload.text,
         blocks: blocks
       }),
       muteHttpExceptions: true
@@ -57,16 +57,16 @@ function sendDeliveryMechanicNotification(baseSentiment, messagePayload) {
 }
 
 /**
- * 手動の接続確認専用。整備部門へ実際に @channel 付きで1件投稿する。
+ * 手動の接続確認専用。整備部門へメンションなしで1件投稿する。
  * フォーム回答・BigQuery・既存通知先は使用しない。トリガーには登録しない。
  */
 function testDeliveryMechanicNotification() {
   const text = '【動作確認・テスト】整備士向け納車後アンケート通知\n'
     + '実際のお客様の回答ではありません。対応は不要です。\n'
-    + '納車全体の印象が「🔴ネガティブ」「🟡ややネガティブ」の場合、このチャンネルに @channel 付きで通知します。';
+    + '納車全体の印象が「🔴ネガティブ」「🟡ややネガティブ」の場合、このチャンネルに通知します。本番通知のみチャンネル全員へのメンションを付けます。';
   const result = sendDeliveryMechanicNotification({ emoji: '🔴' }, {
     text: text,
     blocks: [slackSection(text)]
-  });
+  }, true);
   if (result !== 'sent') throw new Error('整備部門へのテスト通知未完了: ' + result);
 }

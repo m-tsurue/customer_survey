@@ -1,0 +1,23 @@
+{
+  "verifiedOn": "2026-09-28",
+  "source": "Saved Apps Script editor content copied back via UI and compared exactly with local files",
+  "baselineCommit": "29109a2f37d623d21c51a9b871b737798482164b",
+  "files": {
+    "delivery/コード.gs": {
+      "sha256": "359c88ae78cafa9af6ddf055357f5a7d90e01356f6396f1d4f46eb949e467161",
+      "bytes": 25593
+    },
+    "delivery/MechanicNotification.gs": {
+      "sha256": "620a50bfe5dd9f5ab6d2e84f85c0caea759854b54dbf6233c1bdea158e0fbc1c",
+      "bytes": 3606
+    }
+  },
+  "tests": {
+    "localPassed": 19,
+    "liveSyntheticSlackDelivery": true,
+    "testMention": false,
+    "newFormSubmission": false,
+    "bigQueryLiveTest": false
+  },
+  "testMessageUrl": "https://buddicahq.slack.com/archives/C0C4WMLJB1P/p1790557775886519"
+}

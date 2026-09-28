@@ -127,7 +127,9 @@ test('Manual connection test sends one clearly labeled synthetic message only to
   assert.equal(r.sent.length, 1);
   assert.equal(r.sent[0].url, mechanic);
   assert.equal(r.lookupCount(), 0);
-  assert.match(r.sent[0].payload.text, /^<!channel>\n【動作確認・テスト】/);
+  assert.match(r.sent[0].payload.text, /^【動作確認・テスト】/);
+  assert.ok(!JSON.stringify(r.sent[0].payload).includes('<!channel>'));
+  assert.ok(!JSON.stringify(r.sent[0].payload).includes('@channel'));
   assert.match(r.sent[0].payload.text, /実際のお客様の回答ではありません/);
   const disabled = runtime({ configured: false });
   assert.throws(() => disabled.context.testDeliveryMechanicNotification(), /not_configured/);
