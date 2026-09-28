@@ -125,6 +125,7 @@ function onFormSubmit(e) {
 
     const mention = buildMentionText(customerInfo, supportNeeded, extraMentions);
     sendToSlack(message, mention);
+    sendDeliveryMechanicNotification(baseSentiment, message);
   } catch (error) {
     console.error('[delivery_form_notification] エラー:', error);
   }

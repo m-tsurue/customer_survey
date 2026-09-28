@@ -2,7 +2,9 @@
 
 成約後・納車後の Google フォーム回答を受け取り、BigQuery で顧客情報を照合して Slack に通知する、2つの独立した Google Apps Script プロジェクトです。
 
-2026年9月24日に稼働中の Apps Script エディタからコードとマニフェストを取得し、設定画面・概要・トリガー画面を確認して保存しました。コードの改変・GASへの反映・フォーム送信・Slack送信は行っていません。
+2026年9月24日に稼働中の Apps Script エディタからコードとマニフェストを取得し、設定画面・概要・トリガー画面を確認して保存しました。初回バックアップ時にはコードの改変・GASへの反映・フォーム送信・Slack送信は行っていません。
+
+2026年9月28日、納車後アンケートの整備士向け追加通知を実装しました。現在は反映前で、新しいWebhookの作成・本番GASへの反映・実配信テストは未実施です。[仕様・有効化・復旧手順](docs/delivery-mechanic-notification.md)を参照してください。
 
 ## 保存場所
 
@@ -13,7 +15,8 @@
 
 各フォルダには以下を保存しています。
 
-- `コード.gs`：GASエディタのコード全文。取得時の内容をそのまま保存。
+- `コード.gs`：GASコード。納車後は既存通知の直後に追加通知を呼ぶ1行を追加。変更前はコミット `29109a2` に保存。
+- `delivery/MechanicNotification.gs`：整備士向け追加通知。`納車全体の印象` が🔴・🟡の場合に `@channel` 付きで通知。
 - `appsscript.json`：実際のマニフェスト。
 - `settings.json`：プロジェクト・フォーム・トリガー・BigQuery・権限・Slack Webhookの確認済み設定。GASへアップロードするファイルではありません。
 - `script-properties.example.json`：設定するプロパティ名のひな形。秘密値は含みません。
@@ -24,6 +27,7 @@
 
 - [GAS 設定・復元手順](docs/gas-settings.md)
 - [Incoming Webhook 設定・引き継ぎ](docs/slack-incoming-webhooks.md)
+- [整備士向け追加通知：仕様・有効化・復旧](docs/delivery-mechanic-notification.md)
 - [成約後アンケート 判定ロジック](docs/contract-judgment.md)
 - [納車後アンケート 判定ロジック](docs/delivery-judgment.md)
 - [取得時のソース照合情報（SHA-256）](docs/source-snapshot.json)

@@ -56,6 +56,23 @@
     "GCP IAM and API settings outside Apps Script",
     "End-to-end notification test during this backup"
   ],
+  "mechanicNotificationPlan": {
+    "preparedOn": "2026-09-28",
+    "status": "prepared_not_deployed",
+    "sourceFile": "MechanicNotification.gs",
+    "channelId": "C0C4WMLJB1P",
+    "channelName": "service_納車後アンケート",
+    "channelUrl": "https://buddicahq.slack.com/archives/C0C4WMLJB1P",
+    "condition": "Existing baseSentiment.emoji is 🔴 or 🟡",
+    "mention": "<!channel>",
+    "gasScriptPropertyName": "SLACK_MECHANIC_WEBHOOK_URL",
+    "webhookCreated": false,
+    "propertyConfigured": false,
+    "codeDeployed": false,
+    "messageDeliveryTestPerformed": false,
+    "webhookSecretStoredInGit": false,
+    "documentation": "docs/delivery-mechanic-notification.md"
+  },
   "slackIncomingWebhook": {
     "verifiedOn": "2026-09-24",
     "workspaceName": "BUDDICA",

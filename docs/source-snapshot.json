@@ -1,5 +1,7 @@
 {
   "capturedOn": "2026-09-24",
+  "baselineGitCommit": "29109a2f37d623d21c51a9b871b737798482164b",
+  "note": "Hashes describe the original archived sources, not subsequent feature changes. Delivery source was re-read on 2026-09-28 and matched this baseline before preparing mechanic notifications.",
   "files": {
     "delivery/コード.gs": {
       "sha256": "0b038c89cae7b4626a7088a6b593c2f6a31716334d010315f28b9a941b54ca28",
